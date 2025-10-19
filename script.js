@@ -75,24 +75,14 @@ const videoGrid = document.getElementById('videoGrid');
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, starting to load videos...');
     loadVideos();
 });
 
 // Load videos into the grid
 function loadVideos() {
-    console.log('loadVideos function called');
-    console.log('videoGrid element:', videoGrid);
-    
-    if (!videoGrid) {
-        console.error('videoGrid element not found!');
-        return;
-    }
-    
     videoGrid.innerHTML = '';
     
     videoData.forEach(video => {
-        console.log('Processing video:', video.title);
         // Parse date from title
         const parsedDate = parseDateFromTitle(video.title);
         if (parsedDate) {
@@ -102,8 +92,6 @@ function loadVideos() {
         const videoCard = createVideoCard(video);
         videoGrid.appendChild(videoCard);
     });
-    
-    console.log('Videos loaded successfully');
 }
 
 // Create a video card element
