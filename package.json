@@ -5,9 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "python3 -m http.server 8000",
-    "dev": "python3 -m http.server 8000",
-    "build": "echo 'No build step required for static site'",
-    "deploy": "vercel --prod"
+    "dev": "python3 -m http.server 8000"
   },
   "keywords": [
     "youtube",
@@ -17,11 +15,5 @@
     "vercel"
   ],
   "author": "Your Name",
-  "license": "MIT",
-  "devDependencies": {
-    "vercel": "^32.0.0"
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  }
+  "license": "MIT"
 }
